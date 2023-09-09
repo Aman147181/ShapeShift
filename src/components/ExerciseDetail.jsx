@@ -1,6 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import TargetImage from "../assets/target.png"
+import BodyImage from "../assets/body-part.png"
+import EquipmentImage from "../assets/equipment.png"
 const ExerciseDetail = (props) => {
   const { id } = useParams();
   const [exerciseDetail, setExerciseDetail] = useState({});
@@ -37,21 +40,21 @@ const ExerciseDetail = (props) => {
               Exercises keep you strong. <span className="text-red-400">{`${exerciseDetail.name}`}</span> is the best exercise to target your <span className="text-red-400" >{`${exerciseDetail.target}`}</span> It will help you improve your mood and energy.
             </div>
           </div>
-          <div className="p-4 sm:w-1/3 lg:w-1/3 w-1/2 ">
-            <img src="target.png" />
-            <p className=" font-medium text-lg dark:text-gray-200 text-gray-800  ">
+          <div className="p-4 sm:w-1/3 lg:w-1/3 w-1/2">
+            <img src={BodyImage} className="bg-slate-200 rounded-lg p-5 mx-auto" />
+            <p className=" font-medium text-lg dark:text-gray-200 text-gray-800 text-center">
               {exerciseDetail.bodyPart}
             </p>
           </div>
           <div className="p-4 sm:w-1/3 lg:w-1/3 w-1/2">
-            <img src="target.png" />
-            <p className=" font-medium text-lg dark:text-gray-200 text-gray-800 ">
+            <img src={TargetImage} className="bg-slate-200 rounded-lg p-5 mx-auto " />
+            <p className=" font-medium text-lg dark:text-gray-200 text-gray-800 text-center">
               {exerciseDetail.target}
             </p>
           </div>
           <div className="p-4 sm:w-1/3 lg:w-1/3 w-1/2">
-            <img src="equipment.png" />
-            <p className=" font-medium text-lg dark:text-gray-200 text-gray-800 ">
+            <img src={EquipmentImage} className="bg-slate-200 rounded-lg p-5 mx-auto"/>
+            <p className=" font-medium text-lg dark:text-gray-200 text-gray-800 text-center ">
               {exerciseDetail.equipment}
             </p>
           </div>
