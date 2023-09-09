@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Exercises = (props) => {
   return (
     <div className="mt-10">
-      <h1 className="text-4xl text-rose-800 mb-5">Showing Results</h1>
+      <h1 className="text-5xl dark:text-gray-300 text-slate-600 mb-5">Showing Results</h1>
       <div className="grid grid-cols-2 gap-x-10 gap-y-4 md:grid-cols-3 xl:grid-cols-4 mt-5">
         {props.exercises.map((el) => (
            
