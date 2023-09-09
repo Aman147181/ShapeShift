@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <div className="flex fixed top-0 bg-inherit h-[60px] w-screen justify-between space-x-12 items-center sm:px-12 px-6 ">
+    <div className="flex fixed top-0 bg-inherit h-[60px] w-screen justify-between z-[1000] space-x-12 items-center sm:px-12 px-6  ">
     <div className="flex items-center">
         <h1 className="text-5xl dark:text-white font-dance font-extrabold ml-2 flex">
           <a href='#'>

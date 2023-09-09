@@ -8,11 +8,11 @@ const MainPage = (props) => {
     
 let url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${props.search}`;
 const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '36cbb8ca63msh737db88776902f7p1edc9cjsn729c2f6509ad',
-        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-    }
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': '4c1087d55emsh4404d05ba981e72p1b21c7jsn0a819f22a388',
+    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+  }
 };
 
 
@@ -25,7 +25,7 @@ const options = {
   try {
     const response = await fetch(url, options);
       const result = await response.json();
-      props.setExercises(result);
+    props.setExercises(result);
     console.log(result);
   } catch (error) {
     console.error(error);
