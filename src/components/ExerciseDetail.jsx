@@ -5,7 +5,7 @@ import TargetImage from "../assets/target.png"
 import BodyImage from "../assets/body-part.png"
 import EquipmentImage from "../assets/equipment.png"
 const ExerciseDetail = (props) => {
-  const { id } = useParams();
+  let { id } = useParams();
   const [exerciseDetail, setExerciseDetail] = useState({});
   const exerciseOptions = {
     method: "GET",
