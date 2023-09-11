@@ -10,7 +10,7 @@ const Exercises = (props) => {
           <div className="p-2 flex-col space-x-10 " key={el.id}>
             <Link to={`/exercise/${el.id}`}>
 
-            <img src={el.gifUrl} loading="lazy" />
+            <img src={el.gifUrl} />
             <h1 className="text-center text-slate-900 dark:text-gray-100 text-2xl font-medium mt-4">{el.name}</h1>
             </Link>
           

@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ExerciseDetail from "./components/ExerciseDetail";
 
 export default function App() {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
   const toggleDarkTheme = () => {
     setDarkTheme((prevDarkTheme) => !prevDarkTheme);
   };
