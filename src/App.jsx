@@ -4,18 +4,15 @@ import Home from "./components/Home";
 import { Route, Routes } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import ExerciseDetail from "./components/ExerciseDetail";
-
+import useThemeStore from "./context";
 export default function App() {
-  const [darkTheme, setDarkTheme] = useState(false);
-  const toggleDarkTheme = () => {
-    setDarkTheme((prevDarkTheme) => !prevDarkTheme);
-  };
+  const{darkTheme} = useThemeStore();
   return (
     <div className={darkTheme ? 'dark' : ''}>
       <Router>
       <div className="sm:px-20 px-2  dark:bg-slate-500  bg-slate-200 min-h-screen">
         <section id='#'>
-        <Header darkTheme={darkTheme } toggleDarkTheme={toggleDarkTheme} />
+        <Header/>
         </section>
         <Routes>
       <Route path="/" element={<Home />} />

@@ -1,6 +1,7 @@
 import React from "react";
-
+import useThemeStore from "../context";
 const Header = (props) => {
+  const { darkTheme, toggleDarkTheme } = useThemeStore();
   return (
     <div className="flex fixed top-0 bg-inherit h-[60px] w-screen justify-between z-[1000] space-x-12 items-center sm:px-12 px-6  ">
     <div className="flex items-center">
@@ -17,7 +18,7 @@ const Header = (props) => {
         type="checkbox"
         role="switch"
         id="flexSwitchCheckDefault"
-        onClick={props.toggleDarkTheme}
+        onClick={toggleDarkTheme}
       />
     </div>
   </div>
